@@ -8,6 +8,7 @@ import {
 } from "./actionType";
 import axios from 'axios'
 import swal from 'sweetalert';
+// import { Redirect } from 'react-router-dom'
 
 
 export const loginRequest = () => ({
@@ -26,9 +27,24 @@ export const login = payload => async dispatch => {
     console.log('payload:', payload)
     dispatch(loginRequest())
     try {
-        const { data } = await axios.post(`http://localhost:5000/api/v1/auth/login`, payload)
+        const { data } = await axios.post(`http://localhost:5000/api/v1/auth/authenticate`, payload)
         console.log('data:', data)
-        dispatch(loginSuccess())
+        if (data.token) {
+            swal({
+                title: `${data.message}`,
+                icon: "success",
+                button: "Okay",
+            });
+            // <Redirect to="/" />
+        }
+        else {
+            swal({
+                title: `${data.message}`,
+                icon: "info",
+                button: "Okay",
+            });
+        }
+        dispatch(loginSuccess(data))
     }
     catch (err) {
         dispatch(loginFailure(err))
@@ -48,24 +64,34 @@ export const signUpFailure = (errorMessage) => ({
 });
 
 export const signup = payload => async dispatch => {
+    console.log('payload:', payload)
     dispatch(signUpRequest())
     try {
-        const { data } = await axios.post(`http://localhost:5000/api/v1/auth/signup`, payload)
-        // console.log('data:', data)
+        const { data } = await axios.post(`http://localhost:5000/api/v1/auth/register`, payload)
+        console.log('data:', data)
         if (data.token) {
             swal({
-                title: "Account created successfully!",
-                icon: "info",
+                title: `${data.message}`,
+                icon: "success",
                 button: "Okay",
             });
         }
         else {
-
+            swal({
+                title: `${data.message}`,
+                icon: "info",
+                button: "Okay",
+            });
         }
         dispatch(signUpSuccess(data.token))
     }
     catch (err) {
         console.log('err:', err.message)
+        swal({
+            title: "Please enter valid details!",
+            icon: "info",
+            button: "Okay",
+        });
         dispatch(signUpFailure(err))
     }
 }

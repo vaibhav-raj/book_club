@@ -23,20 +23,20 @@ const Footer = () => {
                             <div className={styles.icon_div} >
                                 <div className={styles.icon}>
                                     <a className={styles.Link_add} href="https://github.com/sheikhtausif" variant="" target="_blank" rel="noopener noreferrer" >
-                                        <i class="fab fa-github"></i>
+                                        <i className="fab fa-github"></i>
 
                                     </a>
                                 </div>
                                 <div className={styles.icon} >
                                     <a className={styles.Link_add} href="https://www.linkedin.com/in/mohdtausif/" variant="" target="_blank" rel="noopener noreferrer" >
-                                        <i class="fab fa-linkedin"></i>
+                                        <i className="fab fa-linkedin"></i>
 
                                     </a>
 
                                 </div>
                                 <div className={styles.icon} >
                                     <a className={styles.Link_add} href="https://dev.to" variant="" target="_blank" rel="noopener noreferrer" >
-                                        <i class="fab fa-dev"></i>
+                                        <i className="fab fa-dev"></i>
 
                                     </a>
 
@@ -56,20 +56,20 @@ const Footer = () => {
                             <div className={styles.icon_div} >
                                 <div className={styles.icon}>
                                     <a className={styles.Link_add} href="https://github.com/vaibhav-raj" variant="" target="_blank" rel="noopener noreferrer" >
-                                        <i class="fab fa-github"></i>
+                                        <i className="fab fa-github"></i>
 
                                     </a>
                                 </div>
                                 <div className={styles.icon} >
                                     <a className={styles.Link_add} href="https://www.linkedin.com/in/vaibhav-raj-alpha/" variant="" target="_blank" rel="noopener noreferrer" >
-                                        <i class="fab fa-linkedin"></i>
+                                        <i className="fab fa-linkedin"></i>
 
                                     </a>
 
                                 </div>
                                 <div className={styles.icon} >
                                     <a className={styles.Link_add} href="https://dev.to/" variant="" target="_blank" rel="noopener noreferrer" >
-                                        <i class="fab fa-dev"></i>
+                                        <i className="fab fa-dev"></i>
 
                                     </a>
 
@@ -88,20 +88,20 @@ const Footer = () => {
                             <div className={styles.icon_div} >
                                 <div className={styles.icon}>
                                     <a className={styles.Link_add} href="https://github.com/samy721" variant="" target="_blank" rel="noopener noreferrer" >
-                                        <i class="fab fa-github"></i>
+                                        <i className="fab fa-github"></i>
 
                                     </a>
                                 </div>
                                 <div className={styles.icon} >
                                     <a className={styles.Link_add} href="https://www.linkedin.com/in/sumit-kumar-bhandari/" variant="" target="_blank" rel="noopener noreferrer" >
-                                        <i class="fab fa-linkedin"></i>
+                                        <i className="fab fa-linkedin"></i>
 
                                     </a>
 
                                 </div>
                                 <div className={styles.icon} >
                                     <a className={styles.Link_add} href="https://dev.to/" variant="" target="_blank" rel="noopener noreferrer" >
-                                        <i class="fab fa-dev"></i>
+                                        <i className="fab fa-dev"></i>
 
                                     </a>
 
@@ -120,19 +120,19 @@ const Footer = () => {
                             <div className={styles.icon_div} >
                                 <div className={styles.icon}>
                                     <a className={styles.Link_add} href="https://github.com/pawanpatidar21/" variant="" target="_blank" rel="noopener noreferrer" >
-                                        <i class="fab fa-github"></i>
+                                        <i className="fab fa-github"></i>
                                     </a>
                                 </div>
                                 <div className={styles.icon} >
                                     <a className={styles.Link_add} href="https://www.linkedin.com/in/pawanpatidar21/" variant="" target="_blank" rel="noopener noreferrer" >
-                                        <i class="fab fa-linkedin"></i>
+                                        <i className="fab fa-linkedin"></i>
 
                                     </a>
 
                                 </div>
                                 <div className={styles.icon} >
                                     <a className={styles.Link_add} href="https://dev.to/?signin=true" variant="" target="_blank" rel="noopener noreferrer" >
-                                        <i class="fab fa-dev"></i>
+                                        <i className="fab fa-dev"></i>
 
                                     </a>
 

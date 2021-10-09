@@ -20,14 +20,14 @@ const Signup = () => {
     const dispatch = useDispatch()
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
-    const [phone, setPhone] = useState('')
+    const [contact, setContact] = useState('')
     const [password, setPassword] = useState('')
     const [role, setRole] = useState('')
 
     const handleSignup = () => {
         if (name && email && password && role) {
             // console.log(name, email, password, role);
-            const payload = { name, email, phone, password, role }
+            const payload = { name, email, contact, password, role }
             dispatch(signup(payload))
         }
         else {
@@ -55,7 +55,7 @@ const Signup = () => {
                     autoComplete="off">
                     <TextField value={name} label="Name" type="text" variant="filled" sx={{ background: "white", outline: 'none', border: 'none', borderRadius: '4px' }} onChange={(e) => setName(e.target.value)} />
                     <TextField value={email} label="Email" type="email" variant="filled" sx={{ background: "white", outline: 'none', border: 'none', borderRadius: '4px' }} onChange={(e) => setEmail(e.target.value)} />
-                    <TextField value={phone} label="Mobile" type="number" variant="filled" sx={{ background: "white", outline: 'none', border: 'none', borderRadius: '4px' }} onChange={(e) => setPhone(e.target.value)} />
+                    <TextField value={contact} label="Mobile" type="number" variant="filled" sx={{ background: "white", outline: 'none', border: 'none', borderRadius: '4px' }} onChange={(e) => setContact(e.target.value)} />
                     <TextField value={password} label="Password" type="password" variant="filled" sx={{ background: "white", outline: 'none', border: 'none', borderRadius: '4px' }} onChange={(e) => setPassword(e.target.value)} />
 
                     <FormControl variant="filled"

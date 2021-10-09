@@ -23,7 +23,7 @@ const Login = () => {
 
     const handleLogin = () => {
         if (email && password) {
-            const payload = { email, password }
+            const payload = { email, password, role }
             dispatch(login(payload))
         }
         else {
