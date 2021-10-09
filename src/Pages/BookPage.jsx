@@ -9,6 +9,13 @@ const BookPage = () => {
       <Filter />
        <div className={styles.books}>
         <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
       </div>
     </div>
   );
