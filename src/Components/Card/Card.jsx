@@ -14,10 +14,13 @@ const Card = () => {
               />
             </div>
             <div className={styles.card_desc} >
-              <div className={styles.card_heading}>Audi Q8</div>
+              <div className={styles.card_heading}>Audi Q8
+                <br />
+              <small>English | 12th</small>
+              </div>
               <div className={styles.card_text}>
                 Audi Q8 is a full-size luxury crossover SUV coupé made by Audi
-                that was launched in 2018.
+                that was launched in 2018  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque, cumque. .
               </div>
             </div>
             <button  className={styles.card_button}>
