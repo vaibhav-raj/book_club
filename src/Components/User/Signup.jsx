@@ -11,18 +11,23 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import swal from 'sweetalert';
 import styles from "./login.module.css"
+import { useDispatch } from 'react-redux'
+import { signup } from '../../Redux/Auth/actions'
 
 const Signup = () => {
 
+    const history = useHistory()
+    const dispatch = useDispatch()
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [role, setRole] = useState('')
-    const history = useHistory()
 
     const handleSignup = () => {
         if (name && email && password && role) {
-            console.log(name, email, password, role);
+            // console.log(name, email, password, role);
+            const payload = { name, email, password, role }
+            dispatch(signup(payload))
         }
         else {
             swal({
@@ -54,8 +59,8 @@ const Signup = () => {
                             id="demo-simple-select-filled"
                             value={role}
                             onChange={(e) => setRole(e.target.value)}>
-                            <MenuItem value="consumer">Consumer</MenuItem>
-                            <MenuItem value="provider">Provider</MenuItem>
+                            <MenuItem value="user">Consumer</MenuItem>
+                            <MenuItem value="admin">Provider</MenuItem>
                         </Select>
                     </FormControl>
                 </Box>

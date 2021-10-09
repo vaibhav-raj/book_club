@@ -1,10 +1,10 @@
 .filters {
-  background-color: #f5f5f5;
-  padding: 20px;
-  width: 250px;
-  height: 86vh;
+    background-color: #f5f5f5;
+    padding: 20px;
+    width: 250px;
+    height: 86vh;
 }
 
-.filters > span {
-  padding-bottom: 20px;
+.filters>span {
+    padding-bottom: 20px;
 }

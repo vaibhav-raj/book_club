@@ -7,28 +7,33 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import swal from 'sweetalert';
 import styles from "./login.module.css"
-
+import { useDispatch } from 'react-redux'
+import { login } from '../../Redux/Auth/actions'
 
 const Login = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const dispatch = useDispatch()
     const history = useHistory()
 
     const handleLogin = () => {
         if (email && password) {
-            console.log(email, password);
+            const payload = { email, password }
+            dispatch(login(payload))
         }
         else {
             swal({
                 title: "Please fill all the fields!",
                 icon: "info",
                 button: "Okay",
+                timer: 2000,
             });
         }
     }
 
     return (
         <div className={styles.background}>
+
             <div className={styles.login_div}>
                 <h1>BooksClub</h1>
                 <Box
