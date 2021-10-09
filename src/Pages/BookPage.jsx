@@ -9,6 +9,7 @@ const BookPage = () => {
             <Filter />
             <div className={styles.books}>
                 <Card />
+   
             </div>
         </div>
     );
