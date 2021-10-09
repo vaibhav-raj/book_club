@@ -20,13 +20,14 @@ const Signup = () => {
     const dispatch = useDispatch()
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
+    const [phone, setPhone] = useState('')
     const [password, setPassword] = useState('')
     const [role, setRole] = useState('')
 
     const handleSignup = () => {
         if (name && email && password && role) {
             // console.log(name, email, password, role);
-            const payload = { name, email, password, role }
+            const payload = { name, email, phone, password, role }
             dispatch(signup(payload))
         }
         else {
@@ -39,16 +40,22 @@ const Signup = () => {
     }
 
     return (
-        <div className={styles.background}>
+        <div className={styles.background_signup}>
             <div className={styles.signup_div}>
                 <h1>BooksClub</h1>
                 <Box
+                    style={{
+                        display: "flex",
+                        justifyContent: "flex-start",
+                        flexDirection: "column",
+                        gap: "18px"
+                    }}
                     component="form"
-                    sx={{ '& > :not(style)': { my: 1.5, width: '52.4ch' }, }}
                     noValidate
                     autoComplete="off">
                     <TextField value={name} label="Name" type="text" variant="filled" sx={{ background: "white", outline: 'none', border: 'none', borderRadius: '4px' }} onChange={(e) => setName(e.target.value)} />
                     <TextField value={email} label="Email" type="email" variant="filled" sx={{ background: "white", outline: 'none', border: 'none', borderRadius: '4px' }} onChange={(e) => setEmail(e.target.value)} />
+                    <TextField value={phone} label="Mobile" type="number" variant="filled" sx={{ background: "white", outline: 'none', border: 'none', borderRadius: '4px' }} onChange={(e) => setPhone(e.target.value)} />
                     <TextField value={password} label="Password" type="password" variant="filled" sx={{ background: "white", outline: 'none', border: 'none', borderRadius: '4px' }} onChange={(e) => setPassword(e.target.value)} />
 
                     <FormControl variant="filled"
@@ -59,18 +66,18 @@ const Signup = () => {
                             id="demo-simple-select-filled"
                             value={role}
                             onChange={(e) => setRole(e.target.value)}>
-                            <MenuItem value="user">Consumer</MenuItem>
-                            <MenuItem value="admin">Provider</MenuItem>
+                            <MenuItem value="buyer">Consumer</MenuItem>
+                            <MenuItem value="provider">Provider</MenuItem>
                         </Select>
                     </FormControl>
                 </Box>
 
                 <Button variant="contained" size="large" sx={{
-                    padding: '12px', backgroundColor: '#00ADB5', fontWeight: 'medium', width: '100%', my: 2, fontSize: '18px', '&:hover': {
+                    padding: '12px', backgroundColor: '#00ADB5', fontWeight: 'medium', width: '100%', my: 3, fontSize: '18px', '&:hover': {
                         backgroundColor: '#04c5cf',
                     },
                 }} onClick={handleSignup}>Create account</Button>
-                <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', my: 2.5 }}>
+                <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', my: 1 }}>
                     <Typography variant="p" component="p" sx={{ cursor: 'pointer' }}>
 
                     </Typography>

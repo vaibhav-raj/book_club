@@ -4,13 +4,11 @@ import { Container, Row, Col } from 'react-bootstrap'
 import Slider from '../Carousel/Slider'
 import Contact from '../Contact/Contact'
 import Footer from '../Footer/Footer'
-import NavbarMain from '../Header/NavbarMain'
 
 import styles from './Home.module.css'
 const Home = () => {
     return (
         <div className={styles.wrapper_div}>
-            <NavbarMain />
             <Slider />
             <Container className={styles.home_cont_main}>
                 <h2 className={styles.moto_tag}>WHO ARE WE?</h2>
