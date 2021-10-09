@@ -1,0 +1,36 @@
+.contact_main {
+  background: #222831;
+  border-radius: 10px;
+  margin-top: 70px;
+}
+.detail {
+  margin: 10px 0;
+}
+.contact_heading {
+  text-align: center;
+
+  color: #00adb5;
+}
+.formContro {
+  width: 100%;
+  margin: auto;
+  padding: 40px 80px;
+}
+.label {
+  color: #fff;
+  margin-left: 0;
+}
+.input {
+  border: 1px solid #00adb5;
+}
+
+.form_button {
+  background-color: #00adb5;
+  padding: 10px 30px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  color: #fff;
+  margin-top: 8px;
+  border-radius: 5px;
+}
