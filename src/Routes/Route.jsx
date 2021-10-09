@@ -1,11 +1,16 @@
 import React from 'react'
+import { Route, Switch } from 'react-router-dom'
 
-const route = () => {
+const Router = () => {
     return (
         <div>
-            
+            <Switch>
+                <Route>
+
+                </Route>
+            </Switch>
         </div>
     )
 }
 
-export default route
+export default Router
