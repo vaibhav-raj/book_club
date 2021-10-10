@@ -4,6 +4,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 import Slider from '../Carousel/Slider'
 import Contact from '../Contact/Contact'
 import Footer from '../Footer/Footer'
+import TeamMember from '../TeamMember/TeamMember'
 
 import styles from './Home.module.css'
 const Home = () => {
@@ -41,6 +42,7 @@ const Home = () => {
                 </Row>
             </Container>
             <Contact />
+            <TeamMember/>
             <Footer />
         </div>
     )

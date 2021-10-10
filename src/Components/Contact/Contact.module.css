@@ -1,7 +1,19 @@
 .contact_main {
   background: #222831;
-  border-radius: 10px;
+  border-radius: 8px;
+  width: 76%;
+  margin: auto;
   margin-top: 70px;
+}
+
+@media only screen and (max-width: 600px) {
+  .contact_main {
+    background: #222831;
+    border-radius: 8px;
+    width: 94%;
+    margin: auto;
+    margin-top: 70px;
+  }
 }
 .detail {
   margin: 10px 0;

@@ -6,7 +6,7 @@ const Contact = () => {
      
     }
     return (
-        <Container className={styles.contact_main}>
+        <div className={styles.contact_main}>
        
             <div className={styles.formContro}>
 
@@ -34,7 +34,7 @@ const Contact = () => {
 
                 </form>
             </div>
-        </Container>
+        </div>
     )
 }
 

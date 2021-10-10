@@ -33,6 +33,7 @@ export const NavbarMain = () => {
                 </Nav>
             </Navbar>
                 : <Navbar style={{ background: "#222831" }} variant="dark" expand="lg" sticky="top" className={styles.navbar_main}>
+                    <div style={{display:"flex",alignItems:"center",gap:"28px"}}>
                     <NavLink to="/">
                         <img
                             alt=""
@@ -42,6 +43,7 @@ export const NavbarMain = () => {
                         <span>BooksClub</span>
                     </NavLink>
                     {!isAuth && <NavLink to="/books">Books</NavLink>}
+                    </div>
                     <Nav
                         style={{
                             gap: "14px",
